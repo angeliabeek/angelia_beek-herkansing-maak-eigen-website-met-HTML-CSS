@@ -1,0 +1,66 @@
+.link {
+    width: 70%;
+    background-color: #9ab642;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+.imgspringgarden,
+.imgretrospect {
+    display: block;
+    width: 90%;
+    border: solid #717c48 5px;
+    margin: 15px auto 20px auto;
+}
+
+/* GRID */
+
+.containerevents {
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-auto-rows: max-content;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+        "header header header"
+        ". nav ."
+        ". event ."
+        ". eventmarket ."
+        ". retrospect ."
+        ". feedback ."
+        "footer footer footer";
+}
+header {
+    grid-area: header;
+}
+.main-nav {
+    grid-area: nav;
+}
+.event {
+    grid-area: event;
+}
+.eventmarket {
+    grid-area: eventmarket;
+}
+.retrospect {
+    grid-area: retrospect;
+}
+.feedback {
+    grid-area: feedback;
+}
+footer {
+    grid-area: footer;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+    .containerevents {
+        grid-template-columns: 40px 1fr 1fr 40px;
+        grid-template-areas:
+            ". header header nav"
+            ". event feedback ."
+            ". eventmarket retrospect ."
+            "footer footer footer footer";
+    }
+}

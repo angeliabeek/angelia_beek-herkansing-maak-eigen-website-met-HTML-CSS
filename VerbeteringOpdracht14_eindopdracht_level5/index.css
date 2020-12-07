@@ -1,0 +1,83 @@
+.more {
+    width: 70%;
+    background-color: #9ab642;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+.imggarden,
+.imgmarket,
+.imgharvest {
+    display: block;
+    width: 90%;
+    border: solid #717c48 5px;
+    margin: 15px auto 20px auto;
+}
+
+/* GRID */
+
+.containerindex {
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-auto-rows: max-content;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+        "header header header"
+        ". nav ."
+        ". intro ."
+        ". market ."
+        ". harvest ."
+        "footer footer footer";
+}
+header {
+    grid-area: header;
+}
+.main-nav {
+    grid-area: nav;
+}
+.intro {
+    grid-area: intro;
+}
+.market {
+    grid-area: market;
+}
+.harvest {
+    grid-area: harvest;
+}
+footer {
+    grid-area: footer;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+    .containerindex {
+        grid-template-columns: 40px 1fr 1fr 40px;
+        grid-template-areas:
+            ". header header nav"
+            ". intro intro ."
+            ". market market ."
+            ". harvest harvest ."
+            "footer footer footer footer";
+    }
+    .imggarden,
+    .imgharvest {
+        width: 50%;
+        float: right;
+        margin: 15px 15px 15px 50px;
+    }
+    .imgmarket {
+        width: 50%;
+        float: left;
+        margin: 15px 50px 15px 15px;
+    }
+    .home {
+        padding: 50px 30px 30px 30px;
+    }
+    .more {
+        width: 30%;
+        float: right;
+        margin: 30px 60px 30px auto;
+    }
+}

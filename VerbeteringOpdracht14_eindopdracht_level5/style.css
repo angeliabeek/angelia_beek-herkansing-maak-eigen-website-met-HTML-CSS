@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+}
+body {
+    width: 100%;
+    background-color: #d6e6a4;
+    font: normal 20px Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    color: #132819;
+}
+header {
+    padding: 9px 18px;
+    border-bottom: solid #717c48 8px;
+    margin: 10px 0;
+}
+.logo-head {
+    text-align: center;
+    padding: 15px 15px 15px 0;
+    margin: 20px 20px 20px 0;
+}
+.logo {
+    font: bold 50px Gill Sans Extrabold, sans-serif;
+    color: #9ab642;
+    padding: 10px 10px 0 10px;
+    margin: 10px 10px 0 10px;
+}
+.logo-subtitle {
+    font: 600 20px Gill Sans Extrabold, sans-serif;
+    color: #717c48;
+    padding: 0 0 10px 0;
+    margin: 0 5px 5px 5px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar {
+    text-align: center;
+}
+li {
+    display: inline-block;
+    width: auto;
+    border-right: solid #ebf0db 1px;
+}
+li:last-child {
+    border-right: none;
+}
+a {
+    display: block;
+    background-color: #9ab642;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ebf0db;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+a:hover {
+    background-color: #132819;
+}
+.active {
+    background-color: #132819;
+}
+h2 {
+    font-family: Gill Sans Extrabold, sans-serif;
+    color: #717c48;
+    text-align: center;
+    padding: 5px 0;
+    margin: 10px 0 5px 0;
+}
+.text {
+    background-color: #ebf0db;
+    padding: 18px;
+    border-radius: 30px;
+    margin: 20px;
+}
+footer {
+    background-color: #717c48;
+    font: bold 18px Gill Sans Extrabold, sans-serif;
+    color: #ebf0db;
+    text-align: center;
+    padding: 90px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    header {
+        display: grid;
+        grid-auto-flow: column;
+    }
+    .logo-head {
+        display: grid;
+        justify-content: flex-start;
+    }
+    .navbar {
+        display: grid;
+        justify-content: flex-end;
+        margin-top: 100px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}

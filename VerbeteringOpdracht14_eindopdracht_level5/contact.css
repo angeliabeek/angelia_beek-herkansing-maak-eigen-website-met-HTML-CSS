@@ -1,0 +1,79 @@
+.formcontact {
+    line-height: 1.5;
+    padding: 40px;
+    border: solid #717c48 3px;
+    border-radius: 10px;
+    margin: 25px;
+}
+.forminput,
+.message {
+    width: 90%;
+    background-color: #ebf0db;
+    font: normal 16px Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    outline: none;
+    border: none;
+}
+button {
+    background-color: #9ab642;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ebf0db;
+    text-align: center;
+    padding: 14px 28px;
+    border: solid #717c48 2px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #132819;
+}
+
+/* GRID */
+
+.containercontact {
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-auto-rows: max-content;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+        "header header header"
+        ". nav ."
+        ". contacttext ."
+        ". formcontact ."
+        "footer footer footer";
+}
+header {
+    grid-area: header;
+}
+.main-nav {
+    grid-area: nav;
+}
+.contacttext {
+    grid-area: contacttext;
+}
+.formcontact {
+    grid-area: formcontact;
+}
+footer {
+    grid-area: footer;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+    .containercontact {
+        grid-template-columns: 40px 300px 1fr 40px;
+        grid-template-areas:
+            ". header header nav"
+            ". contacttext formcontact  ."
+            ". . formcontact ."
+            "footer footer footer footer";
+    }
+    .contacttext {
+        padding: 18px 18px 50px 18px;
+    }
+    .forminput {
+        width: 50%;
+    }
+}

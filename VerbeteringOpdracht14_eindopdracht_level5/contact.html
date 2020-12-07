@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="contact.css" />
+</head>
+
+<body>
+    <div class="containercontact">
+        <header>
+            <div class="logo-head">
+                <h1 class="logo">MOESTUIN</h1>
+                <p class="logo-subtitle">Sta in contact met de aarde</p>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="about.html">OVER</a>
+                        </li>
+                        <li>
+                            <a href="events.html">EVENTS</a>
+                        </li>
+                        <li>
+                            <a href="signin.html">AANMELDEN</a>
+                        </li>
+                        <li><a class="active" href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="text contacttext">
+            <h2>Contactformulier</h2>
+            <p>Heb je vragen of opmerkingen? Vul dan dit contactformulier in en wij nemen zo spoedig mogelijk contact
+                met je op.</p>
+        </section>
+        <form class="formcontact" name="contact" method="POST" data-netlify="true">
+            <label for="name">Naam</label><br />
+            <input class="forminput" type="text" name="name" id="name" required /><br />
+            <label for="email">E-mailadres</label><br />
+            <input class="forminput" type="text" name="email" id="email" required /><br />
+            <label for="message">Vraag en/of opmerking</label><br />
+            <textarea class="message" name="message" id="message" rows="10" required></textarea><br />
+            <button type="submit">Verzenden</button>
+        </form>
+        <footer>
+            <p>Copyright 2020</p>
+        </footer>
+    </div>
+</body>
+
+</html>
